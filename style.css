@@ -7,15 +7,14 @@
     font-family: 'Nunito sans', sans-serif;
     box-sizing: border-box;
     /* color: white; */
-    /* overflow-x: hidden; */
-    /* overflow-y: hidden; */
+    overflow-x: hidden;
 }
 html{
     scroll-behavior: smooth;
 }
 .hero{
     height: 100vh;
-    width:100vw;
+    width:100%;
     background-image: url("images/neon\ background.jpg");
     background-size: cover;
     background-position: center;
@@ -49,7 +48,6 @@ nav{
 }
 .logo{
     color: white;
-    font-size: 35px;
     letter-spacing: 1px;
     cursor:pointer;
 }
@@ -105,13 +103,6 @@ nav ul li a:hover::after{
 .burger{
     display: none;
 }
-.sidebar .cross{
-    display: none;
-    margin-top: 45px;
-    margin-left: 130px;
-    font-size: 25px;
-    color:white;
-}
 .btn{
     background-color:#f9004d;
     display: block;
@@ -148,10 +139,11 @@ h4{
     letter-spacing: 2px;
 }
 .newslatter form{
-    width:380px;
+    width:400px;
     max-width: 100%;
     position: relative;
 }
+
 .newslatter form input:first-child{
     display: inline-block;
     width:100%;
@@ -215,6 +207,7 @@ h4{
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     transition: transform 0.5s ease-in-out;
+    overflow-y: hidden;
 }
 
 .sidebar ul li{
@@ -252,12 +245,8 @@ h4{
         display: inline-block;
     }
 }
-
-
-
-
 .sidebarGo{
-    transform: translate(443px,0px);
+    transform: translate(300px,0px);
     position: absolute;
     /* transition: transform 0.5s ease-in-out;*/
 }
@@ -412,7 +401,7 @@ button{
     flex-wrap: wrap;
 }
 .card{
-    height:370px;
+    height:400px;
     width:325px;
     padding:20px 35px;
     background:#191919;
@@ -440,6 +429,10 @@ h5{
     line-height: 27px;
     margin-bottom: 25px;
 }
+.pra_button{
+    padding-top: 20px;
+    height: 60px;
+}
 .card .button{
     background-color:#f9004d ;
     color:white;
@@ -457,13 +450,14 @@ h5{
 }
 
 .main_skills{
-    margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    /* overflow-y: hidden; */
 }
 .skills{
+    overflow-y: visible;
     width: 100vw;
     height: 100vh;
 }
@@ -473,6 +467,10 @@ h5{
     width:100vw;
     margin:0px auto;
     text-align:center;
+}
+.skill_box{
+    overflow-y: hidden;
+    width: 400px;
 }
 
 @media screen and (max-width:720px){
@@ -636,6 +634,7 @@ svg{
     width: 100vw;
     background-color: #101010;
     color: white;
+    overflow: hidden;
 }
 
 .contact-left p{
@@ -717,7 +716,33 @@ svg{
         width:50%;
     }
 }
-@media screen and (max-width:900px) {
+@media screen and (max-width:815px){
+    .contact-left{
+        padding-left: 30px;
+        padding-right: 10px;
+    }
+    .contact-left p{
+        font-size: 18px;
+    }
+    .contact-left h1{
+        font-size: 55px;
+    }
+    .share{
+        margin-top: -40px;
+    }
+    .share a{
+        font-size: 25px;
+    }
+    .share h2{
+        font-size: 20px;
+    }
+    h1{
+        color:white;
+        margin:20px 0px 20px;
+        font-size: 35px;
+    }
+}
+@media screen and (max-width:550px) {
     .row{
         padding-top: 0px;
         display: flex;
@@ -725,15 +750,64 @@ svg{
         align-items: center;
         justify-content: center;
     }
+    h1{
+        color:white;
+        margin:20px 0px 20px;
+        font-size: 35px;
+    }
+    .about-text{
+        width:400px;
+    }
+    .newslatter form{
+        width: 300px;
+    }
+    
+    .share{
+        margin-top: 10px;
+    }
+    .hero h2{
+        font-size: 25px;
+    }
+    .sidebar{
+        width:200px
+    }
+    .sidebar ul li{
+        font-size:16px;
+        margin-left: 60px;
+    }
+    .sidebar .btn{
+        margin-left: 40px;
+        margin-top: 50px;
+    }
+    #contact{
+        height:140vh;
+    }
     .contact-right{
         margin-top: 50px;
-        width:400px;
-        /* padding-left:250px;
-        padding-right: 250px; */
+        width:350px;
+        padding-right: 10px;
+    }
+    .contact-right-btn{
+        margin-left: 20px;
     }
     .contact-me{
-        padding-top: 100px;
-        height:500px;
+        height:300px;
+    }
+    .contact-left{
+        padding-left: 30px;
+    }
+    .contact-left p{
+        font-size: 20px;
+    }
+    .contact-left a{
+        font-size: 20px;
+    }
+    .contact-left .btn{
+        font-size: 15px;
+        width: 150px;
+    }
+    .contact-left h1{
+        font-size: 50px;
     }
 }
 
@@ -743,7 +817,6 @@ svg{
     margin-left: 15px;
     display: block;
 }
-
 .html{
     position: absolute;
     top:68px;

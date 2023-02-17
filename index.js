@@ -60,11 +60,22 @@ var typed=new Typed(".auto-type",{
 var hamburger=document.querySelector(".burger");
 hamburger.addEventListener("click",function(){
     document.querySelector(".sidebar").classList.toggle("sidebarGo");
-    if(!document.querySelector(".sidebar").classList.contains("sidebarGo")){
+    if(!document.querySelector(".sidebar").classList.contains("sidebarGo") &&(screen.width<440)){
+        document.querySelector(".burger").style.marginRight="200px";
+
+        document.querySelector(".burger").style.transition="all 1s ease";
+    }
+    else if(!document.querySelector(".sidebar").classList.contains("sidebarGo") &&(screen.width<476)){
+        document.querySelector(".burger").style.marginRight="250px";
+
+        document.querySelector(".burger").style.transition="all 1s ease";
+    }
+    else if(!document.querySelector(".sidebar").classList.contains("sidebarGo") ){
         document.querySelector(".burger").style.marginRight="300px";
 
         document.querySelector(".burger").style.transition="all 1s ease";
-    }else{
+    }
+    else{
         document.querySelector(".burger").style.marginRight="30px";
     }
 });
